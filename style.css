@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    /* Fonts */
+    --ff-main: 'Josefin Sans';
+    --fw-light: 300;
+    --fw-mid: 400;
+    --fw-bold: 600;
+    --font-size: 1rem;
+
+    /* Colors */
+    --clr-primary-mutedred:  hsla(0, 36%, 70%);
+    --clr-primary-softred:   hsl(0, 93%, 68%);
+
+    --clr-neutral-darkmutedred:  hsl(0, 6%, 24%);
+}
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+ 
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+  html, body {
+    height: 100%;
+    display: grid;
+    justify-items: center;
+  }
+  header {
+    background-color: white;
+  }
+  .header__logo {
+    width: 160px;
+    padding: 2rem;
+  }
+  main {
+    text-align: center;
+    font-family: var(--ff-main);
+    font-size: var(--font-size);
+    color: var(--clr-primary-mutedred);
+    background-color: rgb(250, 245, 245);
+  }
+  .form-validation__main-heading {
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    line-height: 1;
+    font-weight: var(--fw-light);
+  }
+  span {
+    color: var(--clr-neutral-darkmutedred);
+    font-weight: var(--fw-bold);
+  }
+  .form-validation__main-description {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .form-validation__buttons-flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    gap: 2rem;
+    border: 1px solid var(--clr-primary-mutedred);
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 50px;
+  }
+  .form-validation__email-button {
+    color: var(--clr-primary-mutedred);
+    opacity: 0.7;
+    background-color: rgb(250, 245, 245);
+    border: transparent;
+    border-radius: 50px;
+    padding: .5rem;
+    margin-left: 1rem;
+  }
+  .email-button__sendoff-button {
+    background: linear-gradient( to right, rgb(240, 156, 156), var(--clr-primary-softred));
+    box-shadow: 0px 2px 10px var(--clr-primary-mutedred);
+    opacity: 0.7;
+    border-radius: 50px;
+    width: 60px;
+    font-size: 2rem;
+    font-weight: var(--fw-light);
+    color: white;
+    border: transparent;
+  }
