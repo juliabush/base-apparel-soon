@@ -88,6 +88,13 @@
     color: var(--clr-neutral-darkmutedred);
     font-weight: var(--fw-bold);
   }
+ 
+
+.default-image {
+    width: 100%; /* Scale to the container width */
+    object-fit: cover; /* Crops the image to fill the container */
+}
+
   .form-validation__main-description {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -110,7 +117,7 @@
     background-color: rgb(250, 245, 245);
     border: transparent;
     border-radius: 50px;
-    padding: .5rem;
+    padding: .3rem;
     margin-left: 1rem;
   }
   .email-button__sendoff-button {
@@ -123,4 +130,55 @@
     font-weight: var(--fw-light);
     color: white;
     border: transparent;
+  }
+  @media (min-width: 375px) and (max-width: 500px){
+    .form-validation__main-heading {
+        margin-top: 3rem;
+    }
+    .form-validation__background-image {
+        width: 100%; /* Full width of the parent container */
+        height: 300px; /* Set a fixed height for the crop area */
+        overflow: hidden; /* Ensures the overflowing part of the image is hidden */
+        position: relative;
+    }
+  }
+  @media (min-width: 500px) and (max-width: 800px){
+    .form-validation__background-image {
+        width: 100%; /* Full width of the parent container */
+        height: 400px; /* Set a fixed height for the crop area */
+        overflow: hidden; /* Ensures the overflowing part of the image is hidden */
+        position: relative;
+    }
+  }
+  @media (min-width: 800px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 600px;
+        gap: 2rem;
+    }
+    .form-validation__text-column-desktop {
+        display: grid;
+        place-content: center;
+        padding: 4rem;
+        background-image: url(images/logo.svg);
+        background-repeat: no-repeat;
+        background-position: 6rem 4rem;
+        grid-column: 1;
+        text-align: start;
+    }
+    .form-validation__image-column-desktop {
+        background-image: url(images/hero-desktop.jpg);
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .active {
+        display: none;
+    }
+    .form-validation__main-heading {
+        font-size: 4rem;
+        place-content: start;
+    }
+    .form-validation__main-description {
+        font-size: 1.1rem;
+    }
   }

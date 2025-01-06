@@ -7,34 +7,39 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Julia | Base Apparel coming soon page</title>
+  <script defer src="script.js"></script>
 </head>
 <body>
 <main class="website__conatiner">
-  <section class="form-validation">
-    <header class="form-validation__header">
+    <header class="form-validation__header active">
       <img src="images/logo.svg" alt="" class="header__logo">
     </header>
-    <picture class="form-validation__background-image">
-      <img src="images/hero-mobile.jpg" alt="">
-    </picture>
-    <h1 class="form-validation__main-heading">
-      We're <br>
-     <span class="main-heading__highlight">
-      coming <br>
-      soon <br>
-    </span>
-    </h1>
-    <p class="form-validation__main-description">
-      Hello fellow shoppers! We're currently building our new fashion store. 
-      Add your email below to stay up-to-date with announcements and our launch deals.    
-    </p>
-    <div class="form-validation__buttons-flexbox">
-      <button class="form-validation__email-button">
-        Email Address
-        <button class="email-button__sendoff-button">&#62</button>
-      </button>
-    </div>
-  </section>
+    <section class="form-validation__image-column-desktop">
+      <picture class="form-validation__background-image active">
+        <source srcset="images/hero-mobile.jpg" media="(max-width: 375px)">
+        <source srcset="images/hero-desktop.jpg" media="(min-width: 375px)">
+        <img src="images/hero-mobile.jpg" alt="" class="default-image">
+      </picture>
+    </section>
+    <section class="form-validation__text-column-desktop">
+      <h1 class="form-validation__main-heading">
+        We're <br>
+       <span class="main-heading__highlight">
+        coming <br>
+        soon <br>
+      </span>
+      </h1>
+      <p class="form-validation__main-description">
+        Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.    
+      </p>
+      <div class="form-validation__buttons-flexbox">
+        <form class="form-validation__email-button">
+          Email Address
+        </form>
+        <button type="submit" class="email-button__sendoff-button">&#62</button>
+      </div>
+    </section>
 </main>
 </body>
 </html>
