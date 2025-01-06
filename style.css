@@ -117,8 +117,12 @@
     background-color: rgb(250, 245, 245);
     border: transparent;
     border-radius: 50px;
-    padding: .3rem;
+    padding: 1rem;
     margin-left: 1rem;
+  }
+  form {
+    border: transparent;
+    width: 100px;
   }
   .email-button__sendoff-button {
     background: linear-gradient( to right, rgb(240, 156, 156), var(--clr-primary-softred));
